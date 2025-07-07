@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/go
 {
-	"name": "Go",
+	"name": "Hugo Static Website",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/go:1-1.22-bookworm",
 	"features": {
@@ -9,20 +9,27 @@
 			"extended": true,
 			"version": "latest"
 		}
-	}
-
+	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
+	"forwardPorts": [
+		1313
+	],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "go version",
-
+	"postCreateCommand": "cd website && hugo server --bind 0.0.0.0 --port 1313 --liveReloadPort 1314 --disableFastRender",
 	// Configure tool-specific properties.
-	// "customizations": {},
-
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.vscode-typescript-next",
+				"bradlc.vscode-tailwindcss",
+				"ms-vscode.vscode-json"
+			]
+		}
+	},
+	// Set the workspace folder to the website directory
+	"workspaceFolder": "/workspaces/StaticWebsite/website",
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
