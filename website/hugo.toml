@@ -28,7 +28,7 @@ theme = "hello-friend-ng"
     #maxWidth = "50px"
 
   [params.logo]
-    logoMark = ">"
+    logoMark = "<>"
     logoText = "Kirill Denisov"
     logoHomeLink = "/"
     logoCursorDisabled = true
@@ -55,7 +55,6 @@ theme = "hello-friend-ng"
   [services.googleAnalytics]
     ID = ''
 
-    
 
 # Only disable unnecessary taxonomies, keep RSS for SEO
 disableKinds = ["taxonomy", "taxonomyTerm"]
@@ -66,16 +65,16 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
   url  = "mailto:kirill.denisov700@gmail.com"
 
 [[params.social]]
-  name = "github"
-  url  = "https://github.com/kirilledition"
-
-[[params.social]]
   name = "linkedin"
   url  = "https://www.linkedin.com/in/kirilldenisov"
 
 [[params.social]]
-  name = "twitter"
+  name = "X"
   url  = "https://x.com/kirilledition"
+
+[[params.social]]
+  name = "github"
+  url  = "https://github.com/kirilledition"
 
 [caches]
   [caches.images]
