@@ -92,11 +92,10 @@ export default function App() {
           onMouseLeave={() => setBlobShape(generateBlob())}
         >
           <img
-            src="/images/compressed_portrait.webp"
+            src="https://lh3.googleusercontent.com/aida/ADBb0ugoxWkvCBbZXLzGiZ377jfuljIKDkimTLavMLSoa44FVhF2VVKXwVzwioIL7zWOc45zf96EKxFxlMCsQG-PTnER2HZvJKgqlDbut_cPwunzV134AX5gaX9JxvmbNmpf921ffPxsFuRhmsn6Jv8XaD6rVG15P0vIobd5R4FyZOegANu9r5LXYyFFiosoSWpAshCMEOmg0ml3EJKZ9P_NWlf1H3A3JQHuNtq2BORkLQyPHFnXoBwDfMM0MACYRKyp3RKDARdgsJeb"
             alt="Kirill Denisov"
             className="w-full h-full object-cover grayscale contrast-125 brightness-100 hover:scale-110 transition-transform duration-1000 ease-in-out"
             referrerPolicy="no-referrer"
-            loading="lazy"
           />
         </div>
 
