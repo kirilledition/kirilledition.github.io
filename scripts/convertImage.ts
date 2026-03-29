@@ -6,10 +6,7 @@ const outputImagePath = path.join(process.cwd(), 'public/images/compressed_portr
 
 async function convertImage() {
   try {
-    await sharp(inputImagePath)
-      .resize({ width: 512 })
-      .webp({ quality: 90 })
-      .toFile(outputImagePath);
+    await sharp(inputImagePath).resize({ width: 512 }).webp({ quality: 90 }).toFile(outputImagePath);
 
     console.log('Successfully converted image to WebP format.');
   } catch (error) {
@@ -17,4 +14,4 @@ async function convertImage() {
   }
 }
 
-convertImage();
+convertImage().catch(console.error);
