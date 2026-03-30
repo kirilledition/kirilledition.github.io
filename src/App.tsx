@@ -4,7 +4,6 @@
  */
 
 import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
 import { GraduationCap, Briefcase } from 'lucide-react';
 
 const sections = [
@@ -39,16 +38,11 @@ export default function App() {
       >
         <div className="flex flex-col px-8 py-8 md:px-12 md:py-12 max-w-3xl mx-auto min-h-screen">
           <header className="flex-grow flex flex-col justify-start pt-16 pb-12">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="font-serif text-[12vw] sm:text-[64px] md:text-[84px] leading-[1.1] tracking-tight text-paper"
-            >
+            <h1 className="animate-fade-up font-serif text-[12vw] sm:text-[64px] md:text-[84px] leading-[1.1] tracking-tight text-paper opacity-0">
               hello, <br className="block md:hidden" />
               my name is / <br />
               <span className="italic">Kirill</span>
-            </motion.h1>
+            </h1>
           </header>
 
           <div className="w-full border-t border-ink mb-0"></div>
